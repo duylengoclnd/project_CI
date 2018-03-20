@@ -8,12 +8,13 @@ class My_auth {
         $this->CI =& get_instance();
     }
     public function check(){
-        $_user = $this->CI->db->select('id,username,password,email')->from('itq_user')->get()->row_array();
+        $_user = $this->CI->db->select('id,username,password,email,fullname')->from('itq_user')->get()->row_array();
         return array(
             'id' => $_user['id'],
             'username' => $_user['username'],
             'password' => $_user['password'],
             'email' => $_user['email'],
+            'fullname' => $_user['fullname'],
         );
         return NULL;
     }

@@ -7,6 +7,7 @@ class Auth extends CI_Controller {
         $this->load->library('form_validation');
         $data['seo']['title'] = 'Dang nhap vao he thong';
         if ($this->input->post('login')) {
+            echo "dfdfd";
             $_post = $this->input->post('data');
             $data['data']['_post'] = $_post;
             $this->form_validation->set_error_delimiters('<li>', '</li>');
